@@ -1,0 +1,17 @@
+<% if @correct? %>
+
+<%= "<h2>Nice! You know your words. </h2>" %>
+<%= "<h3 class='correct'>#{@current_card.word}</h3>" %>
+
+<% else %>
+
+<%= "<h2>Sorry, the correct word is...</h2>" %>
+<%= "<h3 class='incorrect'>#{@current_card.word}</h3>" %>
+
+<% end %>
+
+<h4><%= @current_card.definition %></h4>
+
+<form action='/play/<%=@deck.id%>' method='get'>
+  <input type='submit' value='Next card'/>
+</form>

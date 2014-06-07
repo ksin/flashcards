@@ -10,8 +10,8 @@ class CreateTables < ActiveRecord::Migration
     create_table :rounds do |t|
       t.integer :user_id
       t.integer :deck_id 
-      t.integer :correct
-      t.integer :incorrect 
+      t.integer :correct, :default => 0
+      t.integer :incorrect, :default => 0
 
       t.timestamps
     end
