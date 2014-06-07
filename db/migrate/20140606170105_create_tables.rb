@@ -6,9 +6,7 @@ class CreateTables < ActiveRecord::Migration
 
       t.timestamp
     end 
-  end
 
-  def change 
     create_table :rounds do |t|
       t.integer :user_id
       t.integer :deck_id 
@@ -17,26 +15,20 @@ class CreateTables < ActiveRecord::Migration
 
       t.timestamps
     end
-  end
-
-  def change 
+ 
     create_table :decks do |t|
       t.string :name 
 
       t.timestamps
     end 
-  end 
 
-  def change 
     create_table :assemblies do |t|
       t.integer :deck_id
       t.integer :card_id 
 
       t.timestamps 
     end 
-  end 
 
-  def change 
     create_table :cards do |t|
       t.string :word
       t.string :definition 
