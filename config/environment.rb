@@ -11,6 +11,11 @@ require 'rubygems'
 require 'uri'
 require 'pathname'
 
+require 'nokogiri'
+require 'open-uri'
+require 'json'
+require 'date'
+
 require 'pg'
 require 'active_record'
 require 'logger'
