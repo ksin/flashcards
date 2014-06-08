@@ -3,6 +3,9 @@ get '/play/:id' do
   user = User.find(session[:user_id])
   user.decks << deck
   round = Round.find_by(user_id: user.id, deck_id: deck.id)
+  round.correct = 0
+  round.incorrect = 0
+  round.save
   @cards = deck.cards
   session[:round_id] = round.id
   session[:card_number] ||= 0
