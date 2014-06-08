@@ -22,7 +22,7 @@ require 'logger'
 
 require 'sinatra'
 require './lib/terse_params_logger'
-use TerseParamsLogger
+# use TerseParamsLogger
 
 require 'erb'
 
