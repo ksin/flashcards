@@ -1,16 +1,18 @@
-<div class="container">
-  <form action="/login" method="post">
-    Login<br><br>
-    <input type="text" name="username" placeholder="username"><br>
-    <input type="password" name="password" placeholder="password"><br>
-    <input type="submit"><br><br>
-  </form>
+<header>UrbanDic™</header>
+  <div class="root">
+    <form  class="login" action="/login" method="post">
+      <input type="text" name="username" placeholder="username">
+      <input type="password" name="password" placeholder="password">
+      <input class="submit" type="submit" value="login">
+    </form>
+  </div>
 
-  <form action="/signup" method="post">
-    Signup<br><br>
-    <input type="text" name="username" placeholder="username"><br>
-    <input type="password" name="password" placeholder="password"><br>
-    <input type="password" name="password_confirmation" placeholder="confirm password"><br>
-    <input type="submit">
-  </form>
-</div>
+  <div class="root">
+    <form action="/signup" method="post">
+      <input type="text" name="username" placeholder="username">
+      <input type="password" name="password" placeholder="password">
+      <input type="password" name="password_confirmation" placeholder="confirm password">
+      <input class="submit" type="submit" value="signup">
+    </form>
+  </div>
+

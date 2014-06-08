@@ -18,9 +18,12 @@
   <title></title>
 </head>
 <body>
+
+  <div class="container">
   <% if session[:user_id] %>
-  <a href='/logout'><button type="button">Logout</button></a>
+  <a href='/logout'><button class="logout" type="button">Logout</button></a>
   <% end %>
-  <%= yield %>
+    <%= yield %>
+  </div>
 </body>
 </html>

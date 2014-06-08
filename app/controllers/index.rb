@@ -1,4 +1,8 @@
 get '/' do
-  erb :'index/index'
+  if session[:user_id]
+    redirect '/user'
+  else
+    erb :'index/index'
+  end
 end
 

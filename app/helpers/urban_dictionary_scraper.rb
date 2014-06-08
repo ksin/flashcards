@@ -103,3 +103,4 @@ class UrbanDictionary
     ]
   end
 end
+
