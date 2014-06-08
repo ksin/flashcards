@@ -17,10 +17,9 @@ words = ['deepfave', 'mom-com', 'manscheduling', 'Snelfie', 'brotherzone', 'hara
          'Rosterbating', 'Overcupensating', 'Friendscraping', 'crackstituents', 'peefurbished', 'motorfloating',
          'stealership', 'niplash', 'antistalking', 'charger-challenged', 'anglo-klaxon', 'fapidextrous', 'presstitute',
          'backspray', 'congressing', 'crosstext', 'literally', 'phoneslinger', 'thriftster', 'Emotionap', 'textretary',
-         'Nocializing', 'craydar', 'tweleb', 'Snelfie', 'brotherzone', 'harassenger', 'wikipedant',
-         'gonser', 'whitespoken', 'textpergers', 'archivist', 'sharkology', 'mandate', 'twincrest',
-         'selfiebombing', 'saltdaddy', 'lurper', 'twerking', 'stunning', 'trimmigrants', 'technocamping',
-         'cyberbaiting', 'jeenyus', 'neckbeard', 'horsrus']
+         'Nocializing', 'craydar', 'tweleb', 'harassenger', 'wikipedant', 'gonser', 'whitespoken', 'textpergers', 'archivist',
+         'sharkology', 'mandate', 'twincrest', 'selfiebombing', 'saltdaddy', 'lurper', 'twerking', 'stunning',
+         'trimmigrants', 'technocamping', 'cyberbaiting', 'jeenyus', 'neckbeard', 'horsrus']
 
 dict = UrbanDictionary.new
 word_objects = []
