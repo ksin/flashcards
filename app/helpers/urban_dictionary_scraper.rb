@@ -103,11 +103,3 @@ class UrbanDictionary
     ]
   end
 end
-
-
-
-
-###############
-
-u = UrbanDictionary.new
-p u.get_definitions('craydar')
