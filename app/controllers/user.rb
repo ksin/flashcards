@@ -9,9 +9,12 @@ post '/login' do
 end
 
 post '/signup' do
-  user=User.new(username: params[:username], password: params[:password], password_confirmation: params[:password_confirmation])
-  if user.save
-    session[:user_id]=user.id
+  @user=User.new(username: params[:username], password: params[:password], password_confirmation: params[:password_confirmation])
+  if @user.save
+    session[:user_id]=@user.id
+    @user=User.find(session[:user_id])
+    @decks = Deck.all
+    @rounds = @user.rounds
     redirect '/user'
   else
   redirect '/'
