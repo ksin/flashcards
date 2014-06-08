@@ -1,0 +1,6 @@
+<h4><%= @cards[card_number].definition %></h2>
+
+<form action='/play/<%=deck_id%>' method='post'>
+  <input type='text' name='answer' placeholder='Guess here'/>
+  <input type='submit'>
+</form>
