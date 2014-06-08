@@ -58,6 +58,10 @@ ul {
 }
 
 .homepage {
+  margin: 20px auto;
+  width: 80%;
+  border: 1px inset blue;
+  background-color: orange;
 }
 
 .home {
@@ -68,10 +72,12 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
+  color: blue;
 }
 
-a:hover {
-  color: black;
+.button {
+
 }
+
+a:hover {color: orange;}
 
