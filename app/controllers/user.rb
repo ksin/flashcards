@@ -1,5 +1,5 @@
 post '/login' do
-  user=User.find_by(username: params[:username], password: params[:password])
+  user=User.find_by(username: params[:username]).try(:authenticate, params[:password])
   if user
     session[:user_id]=user.id
     redirect '/user'
@@ -9,7 +9,7 @@ post '/login' do
 end
 
 post '/signup' do
-  user=User.new(username: params[:username], password: params[:password], password_confirmation: params[:password_confiramtion])
+  user=User.new(username: params[:username], password: params[:password], password_confirmation: params[:password_confirmation])
   if user.save
     session[:user_id]=user.id
     redirect '/user'
@@ -24,5 +24,8 @@ get '/logout' do
 end
 
 get '/user' do
+  @user=User.find(session[:user_id])
+  @decks = Deck.all
+  @rounds = @user.rounds
   erb :'user/userpage'
 end

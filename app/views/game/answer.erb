@@ -1,4 +1,4 @@
-<% if @correct? %>
+<% if @correctness %>
 
 <%= "<h2>Nice! You know your words. </h2>" %>
 <%= "<h3 class='correct'>#{@current_card.word}</h3>" %>
@@ -12,6 +12,6 @@
 
 <h4><%= @current_card.definition %></h4>
 
-<form action='/play/<%=@deck.id%>' method='get'>
+<form action='/play/<%=@deck.id%>/next' method='get'>
   <input type='submit' value='Next card'/>
 </form>

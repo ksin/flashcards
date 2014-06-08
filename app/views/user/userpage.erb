@@ -1,0 +1,13 @@
+<h1> Welcome, <%= @user.username %>!</h1>
+
+<% @decks.each do |deck| %>
+
+<a href="/play/<%=deck.id%>"><%=deck.name%></a>
+
+<% end %>
+
+<% @rounds.each do |round| %>
+
+In your game with the <%=round.deck.name%> deck, you got <%= round.correct %> correct and <%= round.incorrect %> wrong.
+
+<% end %>
