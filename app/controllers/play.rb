@@ -10,7 +10,7 @@ get '/play/:id' do
 end
 
 get '/play/:id/next' do
-  if session[:card_number] == 3
+  if session[:card_number] == 5
     redirect '/done'
   else
     deck = Deck.find(params[:id])
