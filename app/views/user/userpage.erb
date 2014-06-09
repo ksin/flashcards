@@ -1,27 +1,28 @@
-<h1> Welcome, <%= @user.username %>!</h1>
-
-<div class="homepage">
-  <div class="home decks">
-    <ul> <h2>Decks</h2>
+  <div class="userpage">
+  <div class="decks">
+    <ul> <h2>Choose a deck, playa</h2>
     <% @decks.each do |deck| %>
 
-    <li>
+
       <form action="/play" method="get">
-        <button type="submit" value="<%=deck.id%>" name="deck_id"><%=deck.name%></button>
+        <button class="deck" type="submit" value="<%=deck.id%>" name="deck_id"><%=deck.name%></button>
         </form>
-    </li>
+
 
 
     <% end %>
     </ul>
   </div>
 
-  <div class="home stats">
-    <ul><h2>Stats</h2>
+  <div class="stats">
+    <ul><h2>Recent stats</h2>
+    <% if @rounds.empty? %>
+      No stats yet. Go play some fucking games first.
+    <% end %>
     <% @rounds.each do |round| %>
-
-    <li><%=round.deck.name%>: <%= round.correct %> correct | <%= round.incorrect %> wrong</li>
-
+      <% if round.correct + round.incorrect == 5 %>
+        <li><%=round.deck.name%>: <%= round.correct %> correct | <%= round.incorrect %> wrong</li>
+      <% end %>
     <% end %>
     </ul>
   </div>
