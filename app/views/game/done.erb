@@ -1,3 +1,3 @@
-<h3 class='done'>You got <%=@round.correct%> correct and <%=@round.incorrect%> incorrect.</h3>
+<h3 class='done'>You swagged out on <span class="correct"><%=@round.correct%></span> word<%if @round.correct != 1%><%='s'%><%end%>, but you missed <span class="incorrect"><%=@round.incorrect%></span> word<%if @round.incorrect != 1%><%='s'%><%end%> like a bitch.</h3>
 
-<a class='return' href="/user">Return home</a>
+<a class='return' href="/user">Go home. Return to the user page. Play another game. Log out. Do whatever. I don't care.</a>

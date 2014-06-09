@@ -18,16 +18,13 @@ Card.destroy_all
 Deck.destroy_all
 
 User.create(username:'Jake', password:'jake', password_confirmation:'jake')
-User.create(username:'Ken', password:'jake', password_confirmation:'jake')
-User.create(username:'Mario', password:'jake', password_confirmation:'jake')
-User.create(username:'John', password:'jake', password_confirmation:'jake')
-User.create(username:'Tim', password:'jake', password_confirmation:'jake')
 
 sports = ['schnide', 'sportgasm', 'Rosterbating', 'poofball', 'athleholic']
 technology = ['wikipedant', 'inboxia', 'deepfave', 'phoneslinger', 'charger-challenged']
 lewd = ['postboned', 'fapidextrous', 'shweeting', 'Mastabbatical', 'motorfloating']
 potpourri = ['neckbeard', 'Bae', 'Fappy', 'craydar', 'literally']
 social = ['brotherzone', 'Cameragoer', 'yolo', 'Nocializing', 'crosstext']
+celebrities = ['beyonce', 'oprah', 'kanye', 'Michael+Phelps', 'Michael+Jordan']
 
 dict = UrbanDictionary.new
 
@@ -36,6 +33,7 @@ tech_deck = Deck.create(name: "Technology")
 lewd_deck = Deck.create(name: "Lewd")
 potpourri_deck = Deck.create(name: "Potpourri")
 social_deck = Deck.create(name: "Social")
+celebrity_deck = Deck.create(name:"Celebrities")
 
 sports.each do |word|
   w = dict.get_top_definition(word)
@@ -57,3 +55,8 @@ social.each do |word|
   w = dict.get_top_definition(word)
   social_deck.cards << Card.create(word: w[:term].downcase, definition:add_linebreaks(w[:definition]))
 end
+celebrities.each do |word|
+  w = dict.get_top_definition(word)
+  celebrity_deck.cards << Card.create(word: w[:term].downcase.gsub("+"," "), definition:add_linebreaks(w[:definition]))
+end  
+
