@@ -1,17 +1,18 @@
-<% if @correctness %>
+<div class="answer"><% if @correctness %>
 
-<%= "<h3>Nice! You know your words. </h3>" %>
-<%= "<h3 class='correct'>#{@current_card.word}</h3>" %>
+<%= "<h3 class='correct'>Fuck yeah! You know your words. </h3>" %>
+<%= "<h3>#{@current_card.word}</h3>" %>
 
 <% else %>
 
-<%= "<h3>Sorry, the correct word is...</h3>" %>
-<%= "<h3 class='incorrect'>#{@current_card.word}</h3>" %>
+<%= "<h3 class='incorrect'>Damn son, you dumb. The real word is...</h3>" %>
+<%= "<h3>#{@current_card.word}</h3>" %>
 
 <% end %>
+</div>
 
 <h4><%= @current_card.definition %></h4>
 
-<form action='/play/next' method='get'>
-  <input type='submit' value='Next card'/>
+<form class='next' action='/play/next' method='get'>
+  <input class='next-submit' type='submit' value='Next card'/>
 </form>

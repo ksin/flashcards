@@ -18,11 +18,20 @@
   <title></title>
 </head>
 <body>
-
-  <div class="container">
+<nav>
+  <header>UrbanDic <small>flashcards for ballers</small></header>
   <% if session[:user_id] %>
-  <a href='/logout'><button class="logout" type="button">Logout</button></a>
+    <h1>wut up doe, <span class="wutup"><%= User.find(session[:user_id]).username %></span></h1>
+    <a class="logout" href='/logout'>Logout</a>
+  <% else %>
+    <form class="login-menu" action="/login" method="post">
+    <input class="login field-login" type="text" name="username" placeholder="username">
+    <input class="login field-login" type="password" name="password" placeholder="password">
+    <input class="submit-login login" type="submit" value="login">
+     </form>
   <% end %>
+</nav>
+  <div class="container">
     <%= yield %>
   </div>
 </body>
