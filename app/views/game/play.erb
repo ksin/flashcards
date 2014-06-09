@@ -1,15 +1,19 @@
-<h4><%= @cards[card_number].definition %></h4>
+<div class="play">
 
-<div class="guess">
-<form action='/play' method='post'>
-  <input class='field-guess' type='text' name='answer' placeholder='Guess hurr'/>
-  <input class="submit-guess" type='submit'>
-</form>
-</div>
+  <h4><%= @cards[card_number].definition %></h4>
 
-<% if @msg %>
-<div class="msg">
-<%= @msg %>
+  <div class="guess">
+  <form action='/play' method='post'>
+    <input class='field-guess' type='text' name='answer' placeholder='Guess hurr'/>
+    <input class="submit-guess" type='submit'>
+  </form>
+  </div>
+
+  <% if @msg %>
+  <div class="msg">
+  <%= @msg %>
+  </div>
+  <% end %>
+
 </div>
-<% end %>
 

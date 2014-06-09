@@ -226,7 +226,7 @@ a {
   text-decoration: none;
 }
 
-h4 {
+.play {
   margin-top: 2em;
   display: block;
   padding: 1em;
@@ -235,9 +235,19 @@ h4 {
   box-shadow: 1px 1px 2px gray;
   border: 1px solid white;
   color: black;
-  width: 80%;
-  margin-left: 10%;
+  width: 60%;
+  float: left;
+  height: auto;
+  margin-left: 17.6%;
   text-align: center;
+
+}
+
+h4 {
+  display: block;
+  padding: 1em;
+  text-align: center;
+  color: black;
 }
 
 .guess {
@@ -249,9 +259,9 @@ h4 {
 .field-guess {
   width: 20em;
   height: 1.5em;
-  background: white;
+  background-color: white;
   border-radius: 2px;
-  color: black;
+  color: #a18d6c;
   font-weight: 600;
   padding: 4px;
   margin-bottom: 0.5em;
@@ -266,11 +276,11 @@ h4 {
 .submit-guess {
   width: 9em;
   height: 2em;
-  background: #fff;
+  background-color: rgba(0,0,0,0.7);
   border: 1px solid #fff;
   cursor: pointer;
-  border-radius: 2px;
-  color: #a18d6c;
+  border-radius: 3px;
+  color: white;
   font-weight: 500;
   padding: 6px;
   margin-top: 0.5em;
@@ -310,6 +320,7 @@ h3 {
 
 .done {
   text-align: center;
+  margin-top: 7em;
 }
 
 .next {
@@ -320,16 +331,15 @@ h3 {
 .next-submit {
   width: 9em;
   height: 2em;
-  background: #fff;
+  background-color: rgba(0,0,0,0.7);
   border: 1px solid #fff;
   cursor: pointer;
-  border-radius: 2px;
-  color: #a18d6c;
+  border-radius: 3px;
+  color: white;
   font-weight: 500;
   padding: 6px;
   margin-top: 0.5em;
   display: inline-block;
-  margin-left: ;
 }
 
 .next-submit:hover {
@@ -342,6 +352,7 @@ h3 {
   color: white;
   border: 1px solid white;
   padding: 4px;
+  margin-top: 3em;
 }
 
 .return:hover {
